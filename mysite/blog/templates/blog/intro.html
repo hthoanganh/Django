@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Giới Thiệu Của Hoàng Anh</title>
+
+  <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .cloud-overlay {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      background: url("{% static 'blog/images/cloud.png' %}") no-repeat center center;
+      background-size: cover;
+      transform: translate(-50%, 50px);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .cloud-overlay.animate {
+      animation: cloudFloat 1.5s ease-out forwards;
+    }
+    @keyframes cloudFloat {
+      0%   { transform: translate(-50%, 100px); opacity: 0; }
+      40%  { opacity: 1; }
+      100% { transform: translate(-50%, -200px); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="intro-background">
+
+  <header id="sticky-header">
+    <div class="site-title">Ha Techflow</div>
+
+    <nav class="main-nav">
+      <a href="#welcome">Welcome</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </nav>
+    <img src="{% static 'blog/images/hoanganh.jpg' %}" alt="Ảnh đại diện" class="profile-pic-small header-profile-pic">
+  </header>
+
+  <div id="header">
+    <h1>Chào mừng bạn đến với trang web của Hoàng Anh</h1>
+    <button id="interactive-button">
+      <i id="theme-icon" class="fas fa-moon"></i> Chuyển Giao Diện
+    </button>
+  </div>
+
+  <div class="cloud-overlay" id="cloud-intro"></div>
+
+  <div class="card-wrapper">
+      <section id="welcome">
+        <h2 class="section-title">Welcome</h2>
+        <div id="introduction" class="card card--left">
+            <p>Chào mừng bạn đến với trang web của mình, trang web này được mình làm dựa trên quá trình tự tìm hiểu, mày mò tự học.</p>
+            <p>Phát triển bản thân là hành trình không ngừng nghỉ để nâng cao kiến thức, kỹ năng và phẩm chất cá nhân. Khi chúng ta bắt đầu biết đi, biết nói thì đã có được những suy nghĩ trông rất mơ hồ,
+          khi lớn lên thì mỗi con người chúng ta đều có một mục đích, mong muốn riêng dù là thoáng qua đi nữa thì sau này những ước muốn đó nó sẽ là <span class="typewriter-text">một phần của những hoài bão sau này.</span></p>
+      </div>
+
+      <div id="intro2" class="card card--right">
+        <p>Trên con đường phát triển bản thân đó, thì việc tìm hiểu khám phá thế giới hay các sự kiện xung quanh trong cuộc sống vẫn là một trong các yếu tố ảnh hưởng khá nhiều. Và việc đó đã phần nào tạo hình
+        cho chúng ta những bước ngoặc đầu tiên của mình, việc quan trọng đầu tiên có lẽ là việc học và học cái gì, như thế nào cũng là một hướng đi đúng. Miễn là chúng ta được học là đã bớt một thiệt thòi so với
+        người khác rồi. Dù chúng ta có xuất phát ở vị trí nào đi nữa, thì việc phát triển trong chúng ta vẫn phải hoạt động không ngừng.</p>
+      </div>
+      <div id="intro3" class="card card--left">
+        <p>Công nghệ đang thay đổi cuộc sống hàng ngày với tốc độ chóng mặt, đòi hỏi con người phải liên tục cập nhật.
+          Các xu hướng chủ đạo như AI/Machine Learning, Điện toán lượng tử, và Công nghệ bền vững đang định hình tương lai.
+          IoT cùng với 5G/6G tạo nên thế giới kết nối, hỗ trợ VR/AR và robotics.
+          Blockchain và Web3.0 cũng đang thay đổi cách chúng ta tương tác với dữ liệu.
+          Công nghệ vừa mang lại sức mạnh vượt trội, vừa có những thách thức, nhưng chúng ta vẫn nên học hỏi và khám phá thế giới để phát triển bản thân.
+          Đó là lý do mà tôi đã chọn ngành Công nghệ thông tin (IT).</p>
+      </div>
+
+      <div id="intro4" class="card card--right">
+        <p>Để phát triển bản thân, thì chúng ta phải dung nạp kiến thức liên tục bởi tính chất của ngành học và mình nhận thấy rằng không hẳn phải đi nhanh, mà cứ đi từ từ chậm cũng không sao;
+        mà việc quan trọng hơn là mục tiêu ban đầu của mình. Trong cuộc đời chúng ta việc thi cử, tuyển sinh chỉ là một khoảnh khắc còn học vấn thì đi theo cả đời lận. Khi chúng ta vấp ngã thì chẳng phải đã thấy
+        được một thế giới chưa từng thấy hay sao! Chúng ta có thể thử thì mới biết được có được hay không. Cơ hội 50-50, đó chắc cũng sẽ là một bậc thang mới cho chúng ta leo lên chẳng hạn.</p>
+      </div>
+    </section>
+
+     <section id="skills">
+      <h2 class="section-title">Skills & Social</h2>
+      <div id="social-media" class="card card--left">
+        <h2>Mạng xã hội của tôi</h2>
+        <p><a href="https://www.facebook.com/profile.php?id=100042035465635" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+        <p><a href="https://vm.tiktok.com/ZSBSv2wDt/" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></p>
+        <p><a href="https://www.instagram.com/ha_techflow/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+        <p><a href="mailto:htha4067@gmail.com"><i class="fas fa-envelope"></i> Email: htha4067@gmail.com</a></p>
+      </div>
+
+      <div id="skills-card" class="card card--right">
+        <h2>Kỹ năng của tôi</h2>
+        <div class="skills-container">
+          <div class="skill-item">HTML 5</div>
+          <div class="skill-item">CSS 3</div>
+          <div class="skill-item">JavaScript (đang học)</div>
+          <div class="skill-item">Lập trình C++</div>
+          <div class="skill-item">Java</div>
+          <div class="skill-item">MySQL</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">C# (Đang học)</div>
+          <div class="skill-item">PHP (Đang học)</div>
+        </div>
+      </div>
+      </section>
+
+    <section id="about" class="about-section">
+      <div class="quote-card-special card">
+        <p class="quote-text-special">
+          Cuộc sống không phải là chuỗi ngày thở dài, mà là những lần nhịp tim ta đập mạnh.
+        </p>
+        <p class="quote-author-special">- Hoàng Anh -</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="go-to-blog">
+    <a href="{% url 'post_list' %}" class="blog-button">📚 Xem Các Bài Blog</a>
+  </div>
+
+  <script type="module" src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

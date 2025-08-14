@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block body_class %}post-list-background{% endblock %}
+
+{# Bước 1: Ẩn navbar đen từ base.html #}
+{% block navbar %}
+{% endblock navbar %}
+
+{% block content %}
+    <header class="page-header">
+        <a href="{% url 'intro' %}" class="header-brand-link">Ha Techflow</a>
+        <div class="page-title">
+            <a href="{% url 'intro' %}" class="back-arrow-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1>Tất cả bài viết</h1>
+        </div>
+        <div class="header-placeholder"></div> </header>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                {% for post in posts %}
+                    <div class="card blog-card mb-4">
+                        </div>
+                {% empty %}
+                    <div class="card blog-card">
+                        <div class="card-body">
+                            <p>Chưa có bài viết nào để hiển thị.</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
